@@ -1,0 +1,41 @@
+extends layout
+
+block content
+
+ .container
+   h1 Add Book Using POST
+   p.lead
+     | Add a Book.
+     form(action='/books/added', method='post')
+       .form-group
+         label(for='book_id') Book ID    : 
+         input.form-control(type='text', id='book_id', name='book_id', placeholder='Enter the book id')
+       .form-group
+         label(for='book_name') Book Name  :
+         input.form-control(type='text', id='book_name', name='book_name', placeholder='Enter the book name')
+       .form-group
+         label(for='author_name') Author Name :
+         input.form-control(type='text', id='author_name', name='author_name', placeholder='Enter the author name')
+       button.btn.btn-primary(type='submit') POST
+       &nbsp;
+       a.btn.btn-default(role='button', href='/') Cancel
+
+
+ .container
+   h1 Add Book Using GET
+   p.lead
+     | Add a Book.
+     form(action='/books/added', method='get')
+       .form-group
+         label(for='book_id') Book ID    : 
+         input.form-control(type='text', id='book_id', name='book_id', placeholder='Enter the book id')
+       .form-group
+         label(for='book_name') Book Name  :
+         input.form-control(type='text', id='book_name', name='book_name', placeholder='Enter the book name')
+       .form-group
+         label(for='author_name') Author Name :
+         input.form-control(type='text', id='author_name', name='author_name', placeholder='Enter the author name')
+       button.btn.btn-primary(type='submit') GET
+       &nbsp;
+       a.btn.btn-default(role='button', href='/') Cancel
+
